@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage extends BasePage {
@@ -14,6 +15,11 @@ public class HomePage extends BasePage {
 
     public void pass_the_cookie() {
         click(By.xpath("//button[@id='onetrust-accept-btn-handler']"));
+    }
+
+    public void search_and_click() {
+        type(By.xpath("//input[@class='desktopOldAutosuggestTheme-UyU36RyhCTcuRs_sXL9b']"),"Kitap");
+        click(By.xpath("//div[@class='SearchBoxOld-cHxjyU99nxdIaAbGyX7F']"));
     }
 }
 
