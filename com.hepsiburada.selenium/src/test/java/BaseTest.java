@@ -1,31 +1,33 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
 
 import java.time.Duration;
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class BaseTest {
-    WebDriver driver;
 
-    @BeforeAll
+
+public class BaseTest {
+
+    WebDriver driver;
+@BeforeSuite
     public void setUp(){
         WebDriverManager.chromedriver().setup();
-        driver= new ChromeDriver();
-        driver.get("https://www.automationexercise.com/");
+        driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.get("https://www.hepsiburada.com/");
 
 
     }
-
-
-    @AfterAll
+    @AfterSuite
     public void tearDown(){
-        driver.quit();
+    //driver.quit();
     }
-   
+    @Test
+    public void test(){
+        System.out.println("deneme");
+    }
+
 }
