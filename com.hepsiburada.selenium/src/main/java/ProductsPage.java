@@ -12,9 +12,9 @@ public class ProductsPage extends BasePage {
 
     public void get_product() {
 
-        waitForElementsToBeClickable(driver,By.cssSelector("div.moria-ProductCard-bOkJXM"),40);
+        waitForElementsToBeClickable(driver,By.xpath("(//div[@type='comfort'])[1]"),40);
         Random rnd = new Random();
-        List<WebElement> allProducts = findAll(By.cssSelector("div.moria-ProductCard-bOkJXM"));
+        List<WebElement> allProducts = findAll(By.cssSelector("li.productListContent-zAP0Y5msy8OHn5z7T_K_"));
         System.out.println(allProducts.size());
         int randomProduct = rnd.nextInt(allProducts.size());
         allProducts.get(randomProduct).click();

@@ -53,4 +53,9 @@ public class BasePage {
         List<String> tab = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tab.get(index));
     }
+    public static WebElement waitForElementsToBeVisible(WebDriver driver,By locator, int second) {//element tıklanabilir olana kadar beklemesi için method atıyoruz.
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(second));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return element;
+    }
 }

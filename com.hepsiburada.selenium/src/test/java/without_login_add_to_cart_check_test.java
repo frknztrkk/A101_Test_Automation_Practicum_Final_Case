@@ -1,3 +1,4 @@
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class without_login_add_to_cart_check_test extends BaseTest{
@@ -5,6 +6,7 @@ public class without_login_add_to_cart_check_test extends BaseTest{
     HomePage homePage;
     ProductsPage productsPage;
     ProductPage productPage;
+    CartPage cartPage;
 
 
     @Test(priority = 0)
@@ -27,6 +29,17 @@ public class without_login_add_to_cart_check_test extends BaseTest{
     public void addProductToCart(){
         productPage=new ProductPage(driver);
         productPage.add_product_to_cart();
+
+    }
+    @Test(priority = 4)
+    public void goToCart(){
+        productPage=new ProductPage(driver);
+        productPage.go_to_cart();
+    }
+    @Test(priority = 5)
+    public void productCheck(){
+        cartPage=new CartPage(driver);
+        Assert.assertEquals(cartPage.product_count_check(),2,"Secilen Urun Sayısı Yanlıs");
 
     }
 }
