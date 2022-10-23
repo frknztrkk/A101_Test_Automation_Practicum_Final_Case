@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BasePage {
-    WebDriver driver;
+    static WebDriver driver;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -44,7 +44,7 @@ public class BasePage {
         }
     }
 
-    public static WebElement waitForElementsToBeClickable(WebDriver driver,By locator, int second) {//element tıklanabilir olana kadar beklemesi için method atıyoruz.
+    public WebElement waitForElementsToBeClickable(WebDriver driver,By locator, int second) {//element tıklanabilir olana kadar beklemesi için method atıyoruz.
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(second));
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
         return element;
@@ -53,9 +53,14 @@ public class BasePage {
         List<String> tab = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tab.get(index));
     }
-    public static WebElement waitForElementsToBeVisible(WebDriver driver,By locator, int second) {//element tıklanabilir olana kadar beklemesi için method atıyoruz.
+    public WebElement waitForElementsToBeVisible(WebDriver driver,By locator, int second) {//element tıklanabilir olana kadar beklemesi için method atıyoruz.
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(second));
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         return element;
+    }
+    public Boolean isDisplayed(By locator){
+       return find(locator).isDisplayed();
+
+
     }
 }

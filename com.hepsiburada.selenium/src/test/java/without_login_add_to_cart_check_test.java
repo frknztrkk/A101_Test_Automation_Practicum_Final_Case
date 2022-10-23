@@ -9,7 +9,7 @@ public class without_login_add_to_cart_check_test extends BaseTest{
     CartPage cartPage;
 
 
-    @Test(priority = 0)
+    @Test
     public void passTheCookie(){
         homePage = new HomePage(driver);
         homePage.pass_the_cookie();
@@ -30,6 +30,9 @@ public class without_login_add_to_cart_check_test extends BaseTest{
         productPage=new ProductPage(driver);
         productPage.add_product_to_cart();
 
+
+
+
     }
     @Test(priority = 4)
     public void goToCart(){
@@ -39,7 +42,11 @@ public class without_login_add_to_cart_check_test extends BaseTest{
     @Test(priority = 5)
     public void productCheck(){
         cartPage=new CartPage(driver);
-        Assert.assertEquals(cartPage.product_count_check(),2,"Secilen Urun Sayısı Yanlıs");
+        Assert.assertTrue(cartPage.is_on_cart_page(),"Sepetim Sayfasinda Degilsiniz.");
+        Assert.assertEquals(cartPage.product_count_check(),2,"Sepetteki Urun Sayısı Yanlıs.");
+        Assert.assertEquals(ProductPage.productOwner11,cartPage.product_owner_name1(),"Birinci Satici Ismi Yanlis.");
+        Assert.assertEquals(ProductPage.productOwner22.toLowerCase(),cartPage.product_owner_name2().toLowerCase(),"Ikinci Satici Ismi Yanlis.");//lowercase yapmazsak
+        //hepsiburada sitesinde sepete ekleyince isim büyük harf kücük harf karısabiliyor bu da hata veriyor.
 
     }
 }
