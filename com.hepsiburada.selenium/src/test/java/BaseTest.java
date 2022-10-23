@@ -33,9 +33,6 @@ public class BaseTest {
     public void tearDown(){
     //driver.quit();
     }
-    @Test
-    public void test(){
-        System.out.println("deneme");
-    }
+
 
 }

@@ -6,6 +6,10 @@ import java.util.List;
 
 public class CartPage extends BasePage {
     ProductPage productPage;
+    public static String productOwner1;
+    public static String productOwner2;
+    public static String productName1;
+    public static String productName2;
 
     public CartPage(WebDriver driver) {
         super(driver);
@@ -27,20 +31,18 @@ public class CartPage extends BasePage {
         }
       return  isDisplayed(By.xpath("//h1[normalize-space()='Sepetim']"));
     }
-    public String product_owner_name2(){
-        productPage= new ProductPage(driver);
-        String productOwner2=  find(By.cssSelector("div:nth-child(3) div:nth-child(1) div:nth-child(1) div:nth-child(1) span:nth-child(2) a:nth-child(1)")).getText().toLowerCase();
-       if (productOwner2.equals(ProductPage.productOwner22)){
-           System.out.println("Ikinci Satici Ismi Dogru.");
-       }
-        return productOwner2;
+       public void product_check(){
+           productPage= new ProductPage(driver);
+           productOwner1= find(By.cssSelector("body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > section:nth-child(1) > section:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)>a:nth-child(1)")).getText().toLowerCase();
+           productOwner2= find(By.cssSelector("div:nth-child(3) div:nth-child(1) div:nth-child(1) div:nth-child(1) span:nth-child(2) a:nth-child(1)")).getText().toLowerCase();
+           List<WebElement> productsName= findAll(By.cssSelector("div:nth-child(2)>a:nth-child(1)"));
+           productName1 = productsName.get(0).getText();
+           productName2= productsName.get(1).getText();
+           if (productOwner1.equals(ProductPage.productOwner11) && productName1.equals(ProductPage.productName) && productOwner2.equals(ProductPage.productOwner22)&&productName2.equals(ProductPage.productName)) {
+               System.out.println("Tum Urunler Dogru Eklenmistir. ");
+           }
+        }
+
+
+
     }
-    public String product_owner_name1(){
-        productPage=new ProductPage(driver);
-        String productOwner1= find(By.cssSelector("body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > section:nth-child(1) > section:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)>a:nth-child(1)")).getText().toLowerCase();
-       if (productOwner1.equals(ProductPage.productOwner11)){
-           System.out.println("Birinci Satici Ismi Dogru. ");
-       }
-        return productOwner1;
-       }
-}

@@ -10,6 +10,7 @@ public class ProductPage extends BasePage{
     }
     public static String productOwner11;
     public static String productOwner22;
+    public static String productName;
 
 
     public void add_product_to_cart() {
@@ -20,6 +21,7 @@ public class ProductPage extends BasePage{
         productOwner11= find(By.cssSelector("span:nth-child(1) > span:nth-child(2) > a:nth-child(1)")).getText().toLowerCase();
         List<WebElement> allProducts = findAll(By.xpath("//a[@class='merchantStore small']"));
         productOwner22= allProducts.get(0).getText().toLowerCase();
+        productName=find(By.xpath("//h1[@id='product-name']")).getText();
 
 
     }
