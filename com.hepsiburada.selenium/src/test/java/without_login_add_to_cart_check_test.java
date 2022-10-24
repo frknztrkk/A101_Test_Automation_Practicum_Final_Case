@@ -30,16 +30,13 @@ public class without_login_add_to_cart_check_test extends BaseTest{
         productPage=new ProductPage(driver);
         productPage.add_product_to_cart();
 
-
-
-
     }
     @Test(priority = 4)
     public void goToCart(){
         productPage=new ProductPage(driver);
         productPage.go_to_cart();
     }
-    @Test(priority = 5)
+    @Test(priority = 5)//(dependsOnMethods = {"passTheCookie","searchProduct","selectProduct","addProductToCart","goToCart"})
     public void productCheck(){
         cartPage=new CartPage(driver);
         Assert.assertTrue(cartPage.is_on_cart_page(),"Sepetim Sayfasinda Degilsiniz.");
