@@ -1,4 +1,5 @@
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class without_login_add_to_cart_check_test extends BaseTest{
@@ -46,6 +47,7 @@ public class without_login_add_to_cart_check_test extends BaseTest{
         Assert.assertEquals(ProductPage.productName, CartPage.productName1,"Birinci Urun Ismi Aynı Degil");
         Assert.assertEquals(ProductPage.productOwner22, CartPage.productOwner2,"Ikinci Satici Ismi Yanlis.");//lowercase yapmazsak
         Assert.assertEquals(ProductPage.productName,CartPage.productName2,"Ikinci Urun Ismi Yanlıs.");
+
 //
 
     }

@@ -73,6 +73,8 @@ public class product_add_to_cart_and_check_test  extends BaseTest{
         Assert.assertEquals(ProductPage.productName,CartPage.productName2,"Ikinci Urun Ismi Yanlıs.");
 //
 
+
+
     }
 
 

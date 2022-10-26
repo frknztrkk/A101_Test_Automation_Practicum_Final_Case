@@ -26,7 +26,7 @@ public class HomePage extends BasePage {
         String accountText = find(By.xpath("//div[2]/span[1]/a[1]/span[1]")).getText();
         if (accountText.equals("Hesabım")){
             System.out.println("Hesap Girisiniz Dogrulandı.");
-        }else System.out.println("basaramadık");
+        }
       return accountText;
 
 

@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
+import java.util.Locale;
 
 public class CartPage extends BasePage {
     ProductPage productPage;
@@ -33,8 +34,8 @@ public class CartPage extends BasePage {
     }
        public void product_check(){
            productPage= new ProductPage(driver);
-           productOwner1= find(By.cssSelector("body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > section:nth-child(1) > section:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)>a:nth-child(1)")).getText().toLowerCase();
-           productOwner2= find(By.cssSelector("div:nth-child(3) div:nth-child(1) div:nth-child(1) div:nth-child(1) span:nth-child(2) a:nth-child(1)")).getText().toLowerCase();
+           productOwner1= find(By.cssSelector("body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > section:nth-child(1) > section:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)>a:nth-child(1)")).getText().toLowerCase(Locale.ENGLISH);
+           productOwner2= find(By.cssSelector("div:nth-child(3) div:nth-child(1) div:nth-child(1) div:nth-child(1) span:nth-child(2) a:nth-child(1)")).getText().toLowerCase(Locale.ENGLISH);
            List<WebElement> productsName= findAll(By.cssSelector("div:nth-child(2)>a:nth-child(1)"));
            productName1 = productsName.get(0).getText();
            productName2= productsName.get(1).getText();
