@@ -17,7 +17,7 @@ public class ProductsPage extends BasePage {
         List<WebElement> allProducts = findAll(By.cssSelector("li.productListContent-zAP0Y5msy8OHn5z7T_K_"));
         //int randomProduct = rnd.nextInt(allProducts.size());
         //allProducts.get(randomProduct).click();
-        allProducts.get(0).click();
+        allProducts.get(3).click();
         //a.moria-ProductCard-gyqBb
 
 

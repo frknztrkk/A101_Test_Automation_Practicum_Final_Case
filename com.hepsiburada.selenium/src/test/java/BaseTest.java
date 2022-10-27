@@ -1,4 +1,6 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,12 +12,11 @@ import java.time.Duration;
 
 
 public class BaseTest {
-
+    protected static Logger log = LogManager.getLogger();
     WebDriver driver;
+
 @BeforeClass
     public void setUp(){
-
-
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         options.addArguments("--start-maximized");
@@ -29,6 +30,7 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://www.hepsiburada.com/");
+        log.info("Web Sayfası Açıldı");
 
 //        WebDriverManager.operadriver().setup();
 //        driver = new ChromeDriver();

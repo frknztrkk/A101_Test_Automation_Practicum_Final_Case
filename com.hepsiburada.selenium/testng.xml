@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Sequential Test Suite">
-    <test name="Sequential Test">
+    <test name="Sequential Test" thread-count="2">
         <classes>
-            <class name="product_add_to_cart_and_check_test"/>
+<!--            <class name="product_add_to_cart_and_check_test"/>-->
             <class name="without_login_add_to_cart_check_test"/>
         </classes>
     </test>

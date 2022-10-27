@@ -18,7 +18,7 @@ public class HomePage extends BasePage {
     }
 
     public void search_and_click() {
-        type(By.xpath("//input[@class='desktopOldAutosuggestTheme-UyU36RyhCTcuRs_sXL9b']"),"Kitap");
+        type(By.xpath("//input[@class='desktopOldAutosuggestTheme-UyU36RyhCTcuRs_sXL9b']"),"kitap");
         click(By.xpath("//div[@class='SearchBoxOld-cHxjyU99nxdIaAbGyX7F']"));
     }
 

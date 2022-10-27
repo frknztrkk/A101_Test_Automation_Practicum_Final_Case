@@ -1,5 +1,4 @@
 import org.testng.Assert;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class without_login_add_to_cart_check_test extends BaseTest{
@@ -14,6 +13,7 @@ public class without_login_add_to_cart_check_test extends BaseTest{
     public void passTheCookie(){
         homePage = new HomePage(driver);
         homePage.pass_the_cookie();
+
     }
     @Test(priority = 1)
     public void searchProduct(){
@@ -46,7 +46,7 @@ public class without_login_add_to_cart_check_test extends BaseTest{
         Assert.assertEquals(ProductPage.productOwner11, CartPage.productOwner1,"Birinci Satici Ismi Yanlis.");
         Assert.assertEquals(ProductPage.productName, CartPage.productName1,"Birinci Urun Ismi Aynı Degil");
         Assert.assertEquals(ProductPage.productOwner22, CartPage.productOwner2,"Ikinci Satici Ismi Yanlis.");//lowercase yapmazsak
-        Assert.assertEquals(ProductPage.productName,CartPage.productName2,"Ikinci Urun Ismi Yanlıs.");
+        Assert.assertEquals(ProductPage.productName, CartPage.productName2,"Ikinci Urun Ismi Yanlıs.");
 
 //
 
