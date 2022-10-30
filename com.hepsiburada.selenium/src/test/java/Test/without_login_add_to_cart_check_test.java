@@ -11,8 +11,7 @@ public class without_login_add_to_cart_check_test extends BaseTest{
     ProductsPage productsPage;
     ProductPage productPage;
     CartPage cartPage;
-
-
+    
     @Test
     public void passTheCookie(){
         homePage = new HomePage(driver);
