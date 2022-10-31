@@ -3,7 +3,7 @@ Patika.dev ile gerçekleştirilen A101 Test Otomasyon Final Case'i<br>
 
 - [**Testler**](https://github.com/frknztrkk/A101_Test_Automation_Practicum_Final_Case/blob/main/README.md#testler)
    - [&#8544; .Test Adımları](https://github.com/frknztrkk/A101_Test_Automation_Practicum_Final_Case/blob/main/README.md#%E2%85%B0-test-ad%C4%B1mlar%C4%B1)
-   - [&#8545; .Test Adımları](https://github.com/frknztrkk/A101_Test_Automation_Practicum_Final_Case/blob/main/README.md#)
+   - [&#8545; .Test Adımları](https://github.com/frknztrkk/A101_Test_Automation_Practicum_Final_Case/blob/main/README.md#%E2%85%B1-test-ad%C4%B1mlar%C4%B1)
 - [**Testleri Çalıştırmak İçin Gerekli Olanlar**](https://github.com/frknztrkk/A101_Test_Automation_Practicum_Final_Case/blob/main/README.md#testleri-%C3%A7al%C4%B1%C5%9Ft%C4%B1rmak-i%CC%87%C3%A7in-gerekli-olanlar);
   - [Projeyi GitHub Üzerinden Kopyalamak İçin](https://github.com/frknztrkk/A101_Test_Automation_Practicum_Final_Case/blob/main/README.md#projeyi-github-%C3%BCzerinden-kopyalamak-i%C3%A7in);
   - [Testleri Koşmak İçin](https://github.com/frknztrkk/A101_Test_Automation_Practicum_Final_Case/blob/main/README.md#testleri-ko%C5%9Fmak-i%CC%87%C3%A7in);
