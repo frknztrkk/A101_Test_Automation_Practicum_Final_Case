@@ -20,10 +20,21 @@ Patika.dev ile gerçekleştirilen A101 Test Otomasyon Final Case'i<br>
 > * Seçilen ürün için 2 tane farklı satıcıdan ürün seçilip sepete eklenir.<br>
 > * Seçilen ürünün doğru olarak eklendiği ‘Sepetim’ sayfasında doğrulanmalıdır.<br>
 
-## Testleri Çalıştırmak İçin Gerekli Olanlar
+## Testleri Çalıştırmak İçin Gerekli Olanlar<br>
 * İntellij İdea/Eclipse vb. IDE bilgisayarınızda kurulu olmalıdır.
 * Projeyi IDE'nize kopyalamanız gerekmektedir.
 * Gerekli kurulumlar yapıldıktan sonra testng.xml dosyasına sağ tıklayıp run test seçeneğine tıklanmalıdır.
+
+### Projeyi GitHub üzerinden kopyalamak için<br>
+> * Intellij Idea'yı Açın
+> * File>New>Project from Version Control... seçeneğine tıklayın.<br><br>
+> ![VCS](https://user-images.githubusercontent.com/105914984/199110496-e391201c-0656-4d9b-bb07-f6ca618eb8af.PNG)<br>
+> * Proje Url'sini GitHub üzerinden kopyalıp buradaki URL kısmına yapıştırın ve clone butonuna tıklayın.<br><br>
+>![clone](https://user-images.githubusercontent.com/105914984/199110051-a6b87051-18da-4ed8-b5d3-9fdedad38060.PNG)<br>
+
+### Testleri Koşmak İçin<br>
+> * testng.xml dosyasının üzerine gelip sağ tıklayın ve Run '...\testng.xml' seçeneğine tıklayın.<br><br>
+> ![run](https://user-images.githubusercontent.com/105914984/199112947-f8deb273-368b-4866-bf86-27d9027f6c38.PNG)
 
 
 
