@@ -10,7 +10,7 @@ Patika.dev ile gerçekleştirilen A101 Test Otomasyon Final Case'i<br>
 
 
 
-## 1.Testler
+## Testler
 
 #### &#8544; .Test Adımları;<br>
 > * Kullanıcı girişi yapılarak sepete ürün eklenmesi <br>
@@ -30,7 +30,7 @@ Patika.dev ile gerçekleştirilen A101 Test Otomasyon Final Case'i<br>
 > * Seçilen ürün için 2 tane farklı satıcıdan ürün seçilip sepete eklenir.<br>
 > * Seçilen ürünün doğru olarak eklendiği ‘Sepetim’ sayfasında doğrulanmalıdır.<br>
 
-## 2.Testleri Çalıştırmak İçin Gerekli Olanlar<br>
+## Testleri Çalıştırmak İçin Gerekli Olanlar<br>
 * İntellij İdea/Eclipse vb. IDE bilgisayarınızda kurulu olmalıdır.
 * Projeyi IDE'nize kopyalamanız gerekmektedir.
 * Gerekli kurulumlar yapıldıktan sonra testng.xml dosyasına sağ tıklayıp run test seçeneğine tıklanmalıdır.
