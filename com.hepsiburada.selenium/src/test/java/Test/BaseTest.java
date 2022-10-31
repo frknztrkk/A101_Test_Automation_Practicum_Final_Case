@@ -14,7 +14,7 @@ import java.time.Duration;
 public class BaseTest {
     protected static Logger log = LogManager.getLogger();
     protected static WebDriver driver;
-
+    String Url = "https://www.hepsiburada.com/";
 
 
     @BeforeClass
@@ -32,14 +32,14 @@ public class BaseTest {
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        driver.get("https://www.hepsiburada.com/");
+        driver.get(Url);
         log.info("Web Sayfası Açıldı");
 
 //        WebDriverManager.operadriver().setup();
 //        driver = new ChromeDriver();
 //        driver.manage().window().maximize();
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-//        driver.get("https://www.hepsiburada.com");
+//        driver.get(Url);
 
 
     }

@@ -1,15 +1,11 @@
 package Pages;
 
-import org.apache.commons.io.FileUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.File;
-import java.io.IOException;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +13,6 @@ import java.util.List;
 
 public class BasePage {
 
-   protected static Logger log = LogManager.getLogger();
      WebDriver driver;
 
     public BasePage(WebDriver driver) {
@@ -45,42 +40,22 @@ public class BasePage {
         find(locator).sendKeys(text);
     }
 
-    public void waitBySeconds(long seconds) {//statik bekleme için method atıyoruz.
-        try {
-            Thread.sleep(seconds * 1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
     public WebElement waitForElementsToBeClickable(WebDriver driver,By locator, int second) {//element tıklanabilir olana kadar beklemesi için method atıyoruz.
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(second));
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
-        return element;
+        return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
     public void switchDriver(int index){
         List<String> tab = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tab.get(index));
     }
-    public WebElement waitForElementsToBeVisible(WebDriver driver,By locator, int second) {//element tıklanabilir olana kadar beklemesi için method atıyoruz.
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(second));
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-        return element;
-    }
     public Boolean isDisplayed(By locator){
        return find(locator).isDisplayed();
 
-
-    }
-    public void takeScreenshot(String screenshotName){
-        TakesScreenshot screenshot = (TakesScreenshot) driver;
-        File SrcFile=screenshot.getScreenshotAs(OutputType.FILE);
-        try{
-            FileUtils.copyFile(SrcFile,new File("./screenshots/"+ screenshotName +".png"));
-
-        }catch (IOException e){
-            e.printStackTrace();
         }
-
-        }
+    public void hoverOverElement(By locator) {
+        WebElement element = find(locator);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
     }
+
+}
