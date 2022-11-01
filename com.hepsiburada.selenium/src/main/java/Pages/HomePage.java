@@ -1,5 +1,6 @@
 package Pages;
 
+import Data.configProperties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -17,7 +18,8 @@ public class HomePage extends BasePage {
 
 
     public void click_login() {
-        hoverOverElement(loginMenuButtonLocator);
+        click(loginMenuButtonLocator);
+       // hoverOverElement(loginMenuButtonLocator);
         click(loginButtonLocator);
     }
 
@@ -26,7 +28,7 @@ public class HomePage extends BasePage {
     }
 
     public void search_and_click() {
-        type(searchBoxLocator,"kitap");
+        type(searchBoxLocator, configProperties.property.getProperty("searchText"));
         click(searchButtonLocator);
     }
 

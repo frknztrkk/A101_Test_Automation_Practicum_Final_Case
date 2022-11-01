@@ -1,5 +1,6 @@
 package Pages;
 
+import Data.configProperties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -15,12 +16,12 @@ public class LoginPage extends BasePage{
 
     public void fill_the_email_click_login() {
 
-        type(emailBoxLocator,"furkanqatest@gmail.com");
+        type(emailBoxLocator, configProperties.property.getProperty("email"));
        click(emailSubmitButton);
     }
 
     public void fill_the_password_click_login() {
-        type(emailPasswordLocator,"Qaqaqaqa1");
+        type(emailPasswordLocator,configProperties.property.getProperty("emailPwd"));
         click(emailPswrdSubmitButton);
     }
 }
