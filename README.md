@@ -20,7 +20,7 @@ Bu projede testleri farklı yöntemlerle çalıştırma seçenekleri mevcuttur.<
 > * Farklı browser aracılığı ile test: Testler farklı browserlar üzerinde koşulabilir.Bu sayede test daha geniş kapsamlı tüm platformlarda koşmuş olur.<br>
 
 Raporlama seçeneği ile testin aldığı hataları veya testin geçtiğini bir HTML dokümanı üzerinden okuyabilme imkanı ayrıca hataların ekran görüntüleri de 
-hatalara ek olarak bu raporlamada görünebilir.
+hatalara ek olarak bu raporlamada görünebilir.<br>
 Ayrıca Log kayıtları ile bu testin kayıtlarını farklı bir Text dosyasına kayıt ederek kontrol etme imkanı tanır.
 
 #### Kullanılan Teknolojiler ve Kütüphaneler
