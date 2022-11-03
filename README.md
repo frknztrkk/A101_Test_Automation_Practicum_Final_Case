@@ -1,5 +1,4 @@
 # A101_Test_Automation_Practicum_Final_Case<br>
-Patika.dev ile gerçekleştirilen A101 Test Otomasyon Final Case'i<br>
 - [**Proje Hakkında**](https://github.com/frknztrkk/A101_Test_Automation_Practicum_Final_Case#proje-hakk%C4%B1nda)
   - [Açıklama](https://github.com/frknztrkk/A101_Test_Automation_Practicum_Final_Case#a%C3%A7%C4%B1klama)
   - [Kullanılan Teknolojiler ve Kütüphaneler](https://github.com/frknztrkk/A101_Test_Automation_Practicum_Final_Case#kullan%C4%B1lan-teknolojiler-ve-k%C3%BCt%C3%BCphaneler)
