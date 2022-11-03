@@ -22,7 +22,7 @@ public class CartPage extends BasePage {
         super(driver);
     }
 
-    public int product_count_check() {
+    public int product_count_check() {//Sepetteki ürün sayısı doğrulandı.
         List<WebElement> products = findAll(productsListLocator);
         if (products.size() == 2){
             System.out.println("Sepetteki Urun Sayisi Dogru.");
@@ -31,13 +31,13 @@ public class CartPage extends BasePage {
 
     }
 
-    public boolean is_on_cart_page() {
+    public boolean is_on_cart_page() {//Sepet sayfasında olunduğu doğrulandı.
         if (isDisplayed(cartTextLocator)){
             System.out.println("Sepetim Sayfasindasiniz.");
         }
       return  isDisplayed(cartTextLocator);
     }
-       public void product_check(){
+       public void product_check(){//Satıcı bilgileri doğrulandı.
            productPage= new ProductPage(driver);
            productOwner1= find(productOwner1Locator).getText().toLowerCase(Locale.ENGLISH);
            productOwner2= find(productOwner2Locator).getText().toLowerCase(Locale.ENGLISH);

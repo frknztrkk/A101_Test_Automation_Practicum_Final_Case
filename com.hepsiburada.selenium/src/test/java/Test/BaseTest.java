@@ -8,8 +8,6 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.*;
 import java.time.Duration;
 
@@ -20,7 +18,7 @@ public class BaseTest {
 
 
     @BeforeClass
-    public void setUp(){
+    public void setUp(){//Web sayfası ayağa kaldırıldı.Login işlemi sunucu tarafından engellendiği için options değerleri girildi.
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         options.addArguments("--start-maximized");
@@ -39,12 +37,12 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get(configProperties.property.getProperty("baseUrl"));
-        log.info("Web Sayfası Açıldı");
+        log.info("Web Sayfası Açıldı.");
     }
     @AfterClass
-    public void tearDown(){
+    public void tearDown(){//Web sayfası kapatıldı.
     driver.quit();
-
+        log.info("Web Sayfası Kapatıldı.");
     }
 
 }

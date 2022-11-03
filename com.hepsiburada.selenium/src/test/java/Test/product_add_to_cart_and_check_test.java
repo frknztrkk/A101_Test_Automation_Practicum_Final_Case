@@ -70,7 +70,7 @@ public class product_add_to_cart_and_check_test  extends BaseTest{
         productPage=new ProductPage(driver);
         productPage.go_to_cart();
     }
-    @Test(dependsOnMethods = "goToCart")//(dependsOnMethods = {"passTheCookie","searchProduct","selectProduct","addProductToCart","goToCart"})
+    @Test(dependsOnMethods = "goToCart")
     public void productCheck(){
         cartPage=new CartPage(driver);
         Assert.assertTrue(cartPage.is_on_cart_page(),"Sepetim Sayfasinda Degilsiniz.");

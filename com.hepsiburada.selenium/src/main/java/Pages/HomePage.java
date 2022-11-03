@@ -17,22 +17,21 @@ public class HomePage extends BasePage {
 
 
 
-    public void click_login() {
-        click(loginMenuButtonLocator);
-       // hoverOverElement(loginMenuButtonLocator);
+    public void click_login() {//Mouse menünün üstüne getirildi ve tıklandı.
+        hoverOverElement(loginMenuButtonLocator);
         click(loginButtonLocator);
     }
 
     public void pass_the_cookie() {
         click(cookieAcceptLocator);
-    }
+    }//Cookieler kabul edildi.
 
-    public void search_and_click() {
+    public void search_and_click() {//Search box'a config dosyasındaki aranılacak değer yazdırıldı ve tıklandı.
         type(searchBoxLocator, configProperties.property.getProperty("searchText"));
         click(searchButtonLocator);
     }
 
-    public String user_login_validation() {
+    public String user_login_validation() {//Hesap doğrulanması için giriş yapıldıktan sonra element değişmesi kontrol edildi.
         String accountText = find(By.xpath("//div[2]/span[1]/a[1]/span[1]")).getText();
         if (accountText.equals("Hesabım")){
             System.out.println("Hesap Girisiniz Dogrulandı.");

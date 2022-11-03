@@ -6,14 +6,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
+
 
 
 public class BasePage {
@@ -25,7 +22,7 @@ public class BasePage {
 
     }
 
-    public WebElement find(By locator) {//Find için method atıyoruz.
+    public WebElement find(By locator) {//Find için method atandı.
         return driver.findElement(locator);
 
 
@@ -33,31 +30,31 @@ public class BasePage {
 
     public List<WebElement> findAll(By locator) {//findall için method atıyoruz.
         return driver.findElements(locator);
-    }
+    }// findAll için method atandı.
 
-    public void click(By locator) {//click için method atıyoruz.
+    public void click(By locator) {//click için method atandı.
 
         find(locator).click();
     }
 
-    public void type(By locator, String text) {//sendkeys için method atıyoruz.
+    public void type(By locator, String text) {//sendKeys için method atandı.
 
         find(locator).sendKeys(text);
     }
 
-    public WebElement waitForElementsToBeClickable(WebDriver driver,By locator, int second) {//element tıklanabilir olana kadar beklemesi için method atıyoruz.
+    public WebElement waitForElementsToBeClickable(WebDriver driver,By locator, int second) {//Element tıklanabilir olana kadar beklemesi için method atandı.
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(second));
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
-    public void switchDriver(int index){
+    public void switchDriver(int index){//Yeni bir sayfaya geçişte driver'ı switch etmek için method atandı.
         List<String> tab = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tab.get(index));
     }
-    public Boolean isDisplayed(By locator){
+    public Boolean isDisplayed(By locator){//Sayfada element görünür olma kontrolü için method atandı.
        return find(locator).isDisplayed();
 
         }
-    public void hoverOverElement(By locator) {
+    public void hoverOverElement(By locator) {//Element'in üstüne mouse getirmek için method atandı.
         WebElement element = find(locator);
         Actions actions = new Actions(driver);
         actions.moveToElement(element).perform();

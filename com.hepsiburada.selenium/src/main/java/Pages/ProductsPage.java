@@ -13,7 +13,7 @@ public class ProductsPage extends BasePage {
         super(driver);
     }
 
-    public void get_product() {
+    public void get_product() {//Element listesi hemen yüklenmediği için statik bekleme yapıldı.Sonra istenilen indexteki ürüne basıldı.
 
         waitForElementsToBeClickable(driver,productListWaiterLocator,40);
         List<WebElement> allProducts = findAll(productListLocator);
